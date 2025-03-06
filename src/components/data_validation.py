@@ -55,7 +55,7 @@ class DataValidation:
             dataframe_columns = df.columns
             missing_numerical_columns = []
             missing_categorical_columns = []
-            for column in self._schema_config["numerical_columns"]:
+            for column in self._schema_config["numerical_column"]:
                 if column not in dataframe_columns:
                     missing_numerical_columns.append(column)
 
@@ -63,7 +63,7 @@ class DataValidation:
                 logging.info(f"Missing numerical column: {missing_numerical_columns}")
 
 
-            for column in self._schema_config["categorical_columns"]:
+            for column in self._schema_config["categorical_column"]:
                 if column not in dataframe_columns:
                     missing_categorical_columns.append(column)
 
